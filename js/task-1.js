@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const listCategories = document.querySelectorAll('#categories .item');
 
@@ -10,4 +10,4 @@ listCategories.forEach(category => {
 
   console.log(`Category: ${categoryName}`);
   console.log(`Elements: ${categoryItems}`);
-})
+});
