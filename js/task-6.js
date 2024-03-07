@@ -27,11 +27,9 @@ function destroyBoxes() {
 }
 
 createBtn.addEventListener('click', () => {
-  const amount = parseInt(input.value);
-  if (amount >= 1 && amount <= 100) {
-    createBoxes(amount);
-    input.value = '';
-  }
+  createBoxes(input.value);
 });
 
-destroyBtn.addEventListener('click', destroyBoxes);
+destroyBtn.addEventListener('click', () => {
+  destroyBoxes();
+});
