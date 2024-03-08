@@ -5,13 +5,16 @@
 
 body {
   margin: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
-  color: #212121;
   line-height: 1.5;
+  letter-spacing: 0.04em;
+  /* color: #212121; */
+  color: #2e2f42;
+  background-color: #fafafa;
 }
 
 /* Reset styles */
@@ -50,6 +53,32 @@ input {
   font-family: inherit;
 }
 
+/* Сommon styles */
+.login-form button,
+.change-color,
+button[data-create],
+button[data-destroy] {
+  height: 40px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #4e75ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.login-form button:hover,
+.login-form button:focus,
+.change-color:hover,
+.change-color:focus,
+button[data-create]:hover,
+button[data-create]:focus {
+  background-color: #6c8cff;
+}
+
 /* Task 1 */
 .item {
   margin-top: 24px;
@@ -62,12 +91,9 @@ input {
 
 .item h2 {
   padding: 16px 0 0 16px;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.33333;
-  letter-spacing: 0.04em;
-  color: #2e2f42;
 }
 
 .item ul {
@@ -81,21 +107,15 @@ input {
 
 .item li {
   padding: 8px 16px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #2e2f42;
-  border: 1px solid #808080;
-  border-radius: 4px;
   width: 360px;
   height: 40px;
+  border: 1px solid #808080;
+  border-radius: 4px;
 }
 
 /* Task 2 */
 .gallery {
+  margin-top: 24px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -110,44 +130,42 @@ input {
 /* Task 3 */
 #name-input {
   margin-top: 24px;
-  border: 1px solid #808080;
-  border-radius: 4px;
   width: 360px;
   height: 40px;
-  background-color: #fff;
+  background: #fff;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #name-input::placeholder {
   padding-left: 16px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #2e2f42;
+}
+
+#name-input:hover,
+#name-input:focus {
+  border: 1px solid #000;
 }
 
 h1 {
   margin-top: 16px;
   margin-bottom: 24px;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.33333;
-  letter-spacing: 0.04em;
-  color: #2e2f42;
 }
 
 /* Task 4 */
 .login-form {
-  margin-top: 24px;
+  margin: 24px auto 0 auto;
   padding: 24px;
   width: 408px;
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 8px;
   background-color: #fff;
   border-radius: 8px;
@@ -156,12 +174,6 @@ h1 {
 .login-form label {
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #2e2f42;
 }
 
 .login-form input {
@@ -175,25 +187,9 @@ h1 {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.login-form input:hover {
+.login-form input:hover,
+.login-form input:focus {
   border: 1px solid #000;
-}
-
-.login-form button,
-.change-color {
-  height: 40px;
-  padding: 8px 16px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #fff;
-  background-color: #4e75ff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .login-form button {
@@ -201,32 +197,14 @@ h1 {
   width: 86px;
 }
 
-.login-form button:hover,
-.login-form button:focus,
-.change-color:hover,
-.change-color:focus,
-button {
-  background-color: #6c8cff;
-}
-
 /* Task 5 */
 .widget {
-  margin-top: 24px;
+  margin: 24px auto;
   padding: 100px 88px;
   width: 345px;
   height: 280px;
   border: none;
   border-radius: 8px;
-  background-color: #fff;
-}
-
-p .color {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #2e2f42;
 }
 
 .change-color {
@@ -236,14 +214,14 @@ p .color {
 
 /* Task 6 */
 #controls {
-  margin-top: 24px;
+  margin: 24px auto 0;
   padding: 32px;
   width: 486px;
   height: 104px;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 16px;
   border: none;
   border-radius: 8px;
@@ -254,48 +232,16 @@ p .color {
   padding: 8px;
   width: 150px;
   height: 40px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-
   border: 1px solid #808080;
   border-radius: 8px;
 }
 
-#controls input[step] {
-  color: #2e2f42;
-}
-
-button[data-create],
-button[data-destroy] {
-  padding: 8px 16px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 button[data-create] {
   width: 89px;
-  height: 40px;
-  background-color: #4e75ff;
-}
-
-button[data-create]:hover {
-  background-color: #6c8cff;
 }
 
 button[data-destroy] {
   width: 120px;
-  height: 40px;
   background-color: #ff4e4e;
 }
 
@@ -309,8 +255,8 @@ button[data-destroy]:focus {
   padding: 32px;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 16px;
   background-color: #f6f6fe;
   border-radius: 8px;
