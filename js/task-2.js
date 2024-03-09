@@ -1,7 +1,5 @@
 'use strict';
 
-const gallery = document.querySelector('.gallery');
-
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260',
@@ -17,7 +15,9 @@ const images = [
   },
 ];
 
-images.forEach(image => {
+const gallery = document.querySelector('.gallery');
+
+const createGallery = images.map(image => {
   const li = document.createElement('li');
   const img = document.createElement('img');
   img.src = image.url;
@@ -25,5 +25,4 @@ images.forEach(image => {
   li.append(img);
   gallery.append(li);
 });
-
-console.log(images);
+console.log(gallery);
