@@ -16,13 +16,16 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
+const fragment = document.createDocumentFragment();
 
-const createGallery = images.map(image => {
+for (let i = 0; i < images.length; i++) {
+  const image = images[i];
   const li = document.createElement('li');
   const img = document.createElement('img');
   img.src = image.url;
   img.alt = image.alt;
   li.append(img);
-  gallery.append(li);
-});
-console.log(gallery);
+  fragment.append(li);
+}
+
+gallery.append(fragment);

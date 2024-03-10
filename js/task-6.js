@@ -14,7 +14,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-function createBoxes(amount) {
+function createBoxes(value) {
   const inputValue = input.value;
   if (inputValue < 1 || inputValue > 100) {
     return;
